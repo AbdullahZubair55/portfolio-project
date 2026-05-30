@@ -1,0 +1,71 @@
+* {
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: black;
+  color: white;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+}
+
+.hero img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.about,
+.skills,
+.projects,
+.contact {
+  padding: 50px;
+}
+
+.skills-container,
+.projects-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.skill-card,
+.project-card,
+.user-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+textarea,
+button {
+  padding: 10px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
+  color: white;
+}
