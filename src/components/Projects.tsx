@@ -3,9 +3,21 @@ import ProjectCard from './ProjectCard'
 import projectsData from '../data/projects'
 import { fetchUsers } from '../services/api'
 
+type Project = {
+  id: number
+  title: string
+  description: string
+}
+
+type User = {
+  id: number
+  name: string
+  email: string
+}
+
 function Projects() {
-  const [projects] = useState(projectsData)
-  const [users, setUsers] = useState([])
+  const [projects] = useState<Project[]>(projectsData)
+  const [users, setUsers] = useState<User[]>([])
 
   useEffect(() => {
     fetchUsers().then((data) => {

@@ -7,7 +7,7 @@ function Skills() {
     'Git',
     'GitHub',
   ]
-
+ 
   return (
     <section className='skills'>
       <h2>Skills</h2>
