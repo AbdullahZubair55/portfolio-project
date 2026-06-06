@@ -26,7 +26,7 @@ function Projects() {
   }, [])
 
   return (
-    <section className='projects'>
+    <section id='projects' className='projects'>
       <h2>Projects</h2>
 
       <div className='projects-container'>
@@ -39,7 +39,7 @@ function Projects() {
         ))}
       </div>
 
-      <h2>API Users</h2>
+      <h2>API Users (This data is fetching frome a link.)</h2>
 
       {users.map((user) => (
         <div key={user.id} className='user-card'>

@@ -1,11 +1,11 @@
 import SectionsPage from '../components/SectionsPage'
 
-function Home() {
+function ContactPage() {
   return (
     <main>
-      <SectionsPage />
+      <SectionsPage scrollTo='contact' />
     </main>
   )
 }
 
-export default Home
+export default ContactPage

@@ -2,7 +2,7 @@ import profile from '../assets/profile.jpg'
 
 function Hero() {
   return (
-    <section className='hero'>
+    <section id='home' className='hero'>
       <div>
         <h2>Hello, I am Abdullah</h2>
         <p>Frontend React Developer</p>
