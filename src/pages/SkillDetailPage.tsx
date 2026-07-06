@@ -22,7 +22,7 @@ const SKILL_INFO: Record<string, { title: string; icon: string; color?: string; 
     icon: '⚡',
     color: '#f7df1e',
     description:
-      'JavaScript enables interactivity in the browser: updating the DOM, handling events, and fetching data from APIs.',
+      'JavaScript enables interactivity in the browser: updating the DOM, handling events, and working with dynamic content.',
     highlights: ['ES6+', 'Async/Await', 'DOM manipulation']
   },
   react: {

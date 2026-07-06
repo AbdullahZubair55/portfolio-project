@@ -1,29 +1,18 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import ProjectCard from './ProjectCard'
 import projectsData from '../data/projects'
-import { fetchUsers } from '../services/api'
+
 
 type Project = {
   id: number
+  slug: string
   title: string
-  description: string
-}
-
-type User = {
-  id: number
-  name: string
-  email: string
+  shortDescription: string
 }
 
 function Projects() {
   const [projects] = useState<Project[]>(projectsData)
-  const [users, setUsers] = useState<User[]>([])
-
-  useEffect(() => {
-    fetchUsers().then((data) => {
-      setUsers(data)
-    })
-  }, [])
 
   return (
     <section id='projects' className='projects'>
@@ -31,22 +20,14 @@ function Projects() {
 
       <div className='projects-container'>
         {projects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            title={project.title}
-            description={project.description}
-          />
+          <Link to={`/projects/${project.slug}`} className='project-link' key={project.id}>
+            <ProjectCard
+              title={project.title}
+              description={project.shortDescription}
+            />
+          </Link>
         ))}
       </div>
-
-      <h2>API Users (This data is fetching frome a link.)</h2>
-
-      {users.map((user) => (
-        <div key={user.id} className='user-card'>
-          <h3>{user.name}</h3>
-          <p>{user.email}</p>
-        </div>
-      ))}
     </section>
   )
 }

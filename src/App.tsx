@@ -6,6 +6,7 @@ import SkillsPage from './pages/SkillsPage'
 import ProjectsPage from './pages/ProjectsPage'
 import ContactPage from './pages/ContactPage'
 import SkillDetailPage from './pages/SkillDetailPage'
+import ProjectDetailPage from './pages/ProjectDetailPage'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='skills' element={<SkillsPage />} />
           <Route path='skills/:skill' element={<SkillDetailPage />} />
           <Route path='projects' element={<ProjectsPage />} />
+          <Route path='projects/:slug' element={<ProjectDetailPage />} />
           <Route path='contact' element={<ContactPage />} />
           <Route path='*' element={<Navigate to='/' replace />} />
         </Route>
