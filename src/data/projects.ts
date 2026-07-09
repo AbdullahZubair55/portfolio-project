@@ -17,7 +17,7 @@ const projects = [
     description:
       'Gym Fitrack offers a clear training overview with progress insights, habit tracking, and a motivating interface designed for everyday fitness goals.',
     image:
-      'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=80'
+      'https://png.pngtree.com/thumb_back/fh260/background/20240329/pngtree-rows-of-dumbbells-in-the-gym-image_15662386.jpg'
   },
   {
     id: 3,

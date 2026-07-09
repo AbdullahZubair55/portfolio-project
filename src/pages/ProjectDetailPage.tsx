@@ -28,26 +28,34 @@ function ProjectDetailPage() {
           <h1>{project.title}</h1>
           <p>{project.description}</p>
 
-          {project.slug === 'e-commerce-web' && (
-            <div className='project-actions'>
-              <a
-                href='https://e-commercewebsite-steel.vercel.app/'
-                target='_blank'
-                rel='noreferrer'
-                className='project-action-btn'
-              >
-                View Website
-              </a>
-              <a
-                href='https://github.com/AbdullahZubair55/CommerceWeb'
-                target='_blank'
-                rel='noreferrer'
-                className='project-action-btn secondary'
-              >
-                View Code
-              </a>
-            </div>
-          )}
+          {(project.slug === 'e-commerce-web' ||
+            project.slug === 'gym-fitrack') && (
+              <div className='project-actions'>
+                <a
+                  href={
+                    project.slug === 'e-commerce-web'
+                      ? 'https://e-commerce-website-one-pied.vercel.app/'
+                      : 'https://gym-website-three-gules.vercel.app/'
+                  }
+                  target='_blank'
+                  rel='noreferrer'
+                  className='project-action-btn'
+                >
+                  View Website
+                </a><a
+                  href={
+                    project.slug === 'e-commerce-web'
+                      ? 'https://github.com/AbdullahZubair55/E-commerce-website'
+                      : 'https://github.com/AbdullahZubair55/Gym-website'
+                  }
+                  target='_blank'
+                  rel='noreferrer'
+                  className='project-action-btn secondary'
+                >
+                  View Code
+                </a>
+              </div>
+            )}
 
           <Link className='back-link' to='/projects'>Back to projects</Link>
         </div>
